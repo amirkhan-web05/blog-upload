@@ -10,11 +10,7 @@ const filesData = [];
 
 const triggerInput = () => todoFile.click();
 
-const changeHandler = (event) => {
-  if (!event.target.files.length) return;
-
-  const files = Array.from(event.target.files);
-
+const renderFile = (files) => {
   files.forEach((file) => {
     const filesItem = document.createElement('div');
     filesItem.classList.add('files__item');
@@ -35,6 +31,14 @@ const changeHandler = (event) => {
 
     filesData.push(file);
   });
+};
+
+const changeHandler = (event) => {
+  if (!event.target.files.length) return;
+
+  const files = Array.from(event.target.files);
+
+  renderFile(files);
 };
 
 const renderTodo = ({ id, text, completed }) => {
