@@ -1,0 +1,19 @@
+.todo__item.todo-toggle {
+  text-decoration: line-through;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.file__image {
+  width: 200px;
+  height: 200px;
+}
+
+.todo-list {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
